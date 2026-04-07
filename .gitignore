@@ -1,0 +1,13 @@
+.qa/
+site/.server.err.log
+site/.server.out.log
+site/assets/img/showcase/cargo-scene.png
+site/assets/img/showcase/cargo-scene.webp
+site/assets/img/showcase/equipment-scene.png
+site/assets/img/showcase/equipment-scene.webp
+site/assets/img/showcase/experience-logos.png
+site/assets/img/showcase/experience-logos.webp
+site/assets/img/showcase/hero-candidate-*.webp
+site/assets/img/showcase/passenger-scene.png
+site/assets/img/showcase/passenger-scene.webp
+site/assets/img/showcase/route-scene.webp
