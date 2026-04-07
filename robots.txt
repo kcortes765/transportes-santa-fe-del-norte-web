@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://{{DOMAIN}}/sitemap.xml
+Sitemap: https://kcortes765.github.io/transportes-santa-fe-del-norte-web/sitemap.xml
