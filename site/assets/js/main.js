@@ -1,11 +1,11 @@
 ﻿const SITE_CONFIG = {
   companyName: "Transportes Santa Fe del Norte",
-  phone: "{{PHONE}}",
-  whatsapp: "{{WHATSAPP}}",
-  email: "{{EMAIL}}",
-  address: "{{ADDRESS}}",
-  domain: "{{DOMAIN}}",
-  formEndpoint: "{{FORM_ENDPOINT}}",
+  phone: "+56 9 2075 8945",
+  whatsapp: "+56 9 2075 8945",
+  email: "contacto@santafedelnorte.cl",
+  address: "",
+  domain: "https://kcortes765.github.io/transportes-santa-fe-del-norte-web",
+  formEndpoint: "",
 };
 
 const PLACEHOLDER_PATTERN = /\{\{[^}]+\}\}/;
@@ -314,7 +314,7 @@ function setupContactForm() {
     if (isPendingValue(SITE_CONFIG.formEndpoint)) {
       event.preventDefault();
       setStatus(
-        "El canal de envío aún no está habilitado en esta versión. Activa el endpoint antes de publicar el formulario.",
+        "El formulario aún no está conectado. Por ahora escríbenos por WhatsApp, correo o teléfono.",
         "warning",
       );
       return;

@@ -1646,7 +1646,7 @@ section[aria-labelledby="porque-title"] {
 
 .hero-stage {
   position: relative;
-  min-height: clamp(24rem, 38vw, 32rem);
+  aspect-ratio: 1.35 / 1;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent), #0f0f0f;
@@ -1721,7 +1721,7 @@ section[aria-labelledby="porque-title"] {
   position: absolute;
   inset: 0;
   object-fit: cover;
-  object-position: 62% 54%;
+  object-position: 42% 54%;
 }
 
 .scene-image--passenger {
@@ -1741,7 +1741,7 @@ section[aria-labelledby="porque-title"] {
 
 .scene-image--about {
   object-fit: cover;
-  object-position: center bottom;
+  object-position: 42% center;
 }
 
 .scene-image--logos {
