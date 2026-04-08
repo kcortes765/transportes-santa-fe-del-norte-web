@@ -1788,7 +1788,8 @@ section[aria-labelledby="porque-title"] {
 }
 
 .scene-image--fleet-frontside {
-  transform: scale(1.42);
+  padding: 1.15rem 0.85rem 0.8rem 1.1rem;
+  transform: scale(1.16) translateX(1.5%);
 }
 
 .scene-image--fleet-pvo {
@@ -1819,7 +1820,7 @@ section[aria-labelledby="porque-title"] {
 
 .fleet-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
