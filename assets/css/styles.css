@@ -1570,6 +1570,13 @@ section[aria-labelledby="porque-title"] {
   font-size: clamp(1.02rem, 1.7vw, 1.18rem);
 }
 
+.hero-standards {
+  max-width: 34rem;
+  margin: 1rem 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 700;
+}
+
 .hero-facts {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1724,9 +1731,34 @@ section[aria-labelledby="porque-title"] {
   object-position: 42% 54%;
 }
 
+.scene-image--hero-van {
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+  object-position: center center;
+  padding: 1.5rem;
+}
+
+.scene-image--hero-truck {
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+  object-position: center center;
+  padding: 1.2rem;
+  transform: scale(1.08);
+}
+
 .scene-image--passenger {
   object-fit: cover;
   object-position: center bottom;
+}
+
+.scene-image--passenger-vehicle,
+.scene-image--cargo-vehicle,
+.scene-image--equipment-vehicle {
+  object-fit: contain;
+  object-position: center center;
+  padding: 1rem;
 }
 
 .scene-image--cargo {
@@ -1749,6 +1781,28 @@ section[aria-labelledby="porque-title"] {
   object-position: center center;
 }
 
+.scene-image--fleet-card {
+  object-fit: contain;
+  object-position: center center;
+  padding: 1rem;
+}
+
+.scene-image--fleet-frontside {
+  transform: scale(1.42);
+}
+
+.scene-image--fleet-pvo {
+  transform: scale(1.22);
+}
+
+.scene-image--fleet-atego {
+  transform: scale(1.26);
+}
+
+.scene-image--fleet-99 {
+  transform: scale(1.18);
+}
+
 .section-heading--wide {
   max-width: 56rem;
 }
@@ -1756,6 +1810,55 @@ section[aria-labelledby="porque-title"] {
 .service-showcase {
   display: grid;
   gap: 1.4rem;
+}
+
+.fleet-showcase {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.fleet-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1.2rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow-soft);
+}
+
+.fleet-card__media {
+  display: grid;
+  place-items: center;
+  min-height: 14rem;
+  border-radius: var(--radius-md);
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(244, 166, 36, 0.14),
+      transparent 38%
+    ),
+    linear-gradient(180deg, #fff 0%, #f5f1e8 100%);
+  overflow: hidden;
+}
+
+.fleet-card__body h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.55rem, 2vw, 1.9rem);
+  line-height: 0.96;
+  text-transform: uppercase;
+}
+
+.fleet-card__body p {
+  margin: 0.7rem 0 0;
+  color: var(--color-text-muted);
 }
 
 .service-spotlight {
@@ -2013,6 +2116,10 @@ section[aria-labelledby="porque-title"] {
     font-size: 1rem;
   }
 
+  .hero-standards {
+    font-size: 0.98rem;
+  }
+
   .eyebrow {
     font-size: 0.8rem;
     letter-spacing: 0.14em;
@@ -2084,7 +2191,8 @@ section[aria-labelledby="porque-title"] {
   .experience-redesign__grid,
   .service-spotlight,
   .service-spotlight:nth-child(even),
-  .coverage-detail-grid {
+  .coverage-detail-grid,
+  .fleet-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2116,7 +2224,8 @@ section[aria-labelledby="porque-title"] {
 
   .service-spotlight__media,
   .experience-redesign__logos,
-  .about-story__scene {
+  .about-story__scene,
+  .fleet-card__media {
     min-height: 12rem;
   }
 
