@@ -1556,22 +1556,24 @@ section[aria-labelledby="porque-title"] {
 }
 
 .hero--editorial .hero__layout {
-  align-items: start;
-  gap: clamp(2rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(0, 0.98fr) minmax(28rem, 1.02fr);
+  align-items: center;
+  gap: clamp(2.25rem, 4vw, 4.5rem);
 }
 
 .hero--editorial .display-title {
-  max-width: 11ch;
-  font-size: clamp(3.6rem, 7.2vw, 5.8rem);
+  max-width: 12.5ch;
+  font-size: clamp(3.2rem, 5.8vw, 5.15rem);
+  line-height: 0.9;
 }
 
 .hero--editorial .hero__lead {
-  max-width: 34rem;
+  max-width: 38rem;
   font-size: clamp(1.02rem, 1.7vw, 1.18rem);
 }
 
 .hero-standards {
-  max-width: 34rem;
+  max-width: 38rem;
   margin: 1rem 0 0;
   color: rgba(255, 255, 255, 0.82);
   font-weight: 700;
@@ -1635,8 +1637,9 @@ section[aria-labelledby="porque-title"] {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  min-height: auto;
+  min-height: clamp(24rem, 38vw, 34rem);
   gap: 1rem;
+  align-self: center;
 }
 
 .hero-stage,
@@ -1653,10 +1656,20 @@ section[aria-labelledby="porque-title"] {
 
 .hero-stage {
   position: relative;
-  aspect-ratio: 1.35 / 1;
+  aspect-ratio: 1.6 / 1;
+  min-height: clamp(22rem, 34vw, 30rem);
   border: 1px solid rgba(255, 255, 255, 0.08);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent), #0f0f0f;
+    radial-gradient(
+      circle at 24% 30%,
+      rgba(244, 166, 36, 0.18),
+      transparent 26%
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 44%),
+    linear-gradient(180deg, #101010 0%, #0a0a0a 100%);
+  box-shadow:
+    0 34px 80px rgba(0, 0, 0, 0.34),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02);
 }
 
 .hero-stage::after {
@@ -1664,18 +1677,18 @@ section[aria-labelledby="porque-title"] {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.32)),
-    linear-gradient(180deg, transparent 52%, rgba(0, 0, 0, 0.5));
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.26)),
+    linear-gradient(180deg, transparent 58%, rgba(0, 0, 0, 0.42));
   pointer-events: none;
 }
 
 .hero-stage__badge {
   position: absolute;
-  left: 1.1rem;
-  bottom: 1.1rem;
+  left: 1.3rem;
+  top: 1.3rem;
   z-index: 1;
   margin: 0;
-  padding: 0.6rem 0.9rem;
+  padding: 0.58rem 0.92rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   background: rgba(10, 10, 10, 0.72);
@@ -1743,9 +1756,10 @@ section[aria-labelledby="porque-title"] {
   position: absolute;
   inset: 0;
   object-fit: contain;
-  object-position: center center;
-  padding: 1.2rem;
-  transform: scale(1.08);
+  object-position: center bottom;
+  padding: 2rem 1.8rem 2.45rem;
+  transform: scale(1.16) translate(1.8%, 1%);
+  filter: drop-shadow(0 26px 34px rgba(0, 0, 0, 0.5));
 }
 
 .scene-image--passenger {
@@ -2203,6 +2217,12 @@ section[aria-labelledby="porque-title"] {
 }
 
 @media (max-width: 760px) {
+  .hero--editorial .hero__layout {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 1.4rem;
+  }
+
   .hero--editorial .display-title {
     max-width: 100%;
     font-size: clamp(2.9rem, 13vw, 4.2rem);
